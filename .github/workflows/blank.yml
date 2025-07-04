@@ -35,4 +35,4 @@ jobs:
           paths: |
             .
           assignments: |
-            policyset.json
+            assign.json
