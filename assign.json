@@ -8,7 +8,7 @@
       "policyDefinitionId": "/subscriptions/c5fddee6-8712-4dd8-b580-637b37dc5472/providers/Microsoft.Authorization/policySetDefinitions/dso_monitoring_mdc",
       "parameters": {
         "workspace_id": {
-          "value": "/subscriptions/c5fddee6-8712-4dd8-b580-637b37dc5472/resourceGroups/mdc-poc/providers/Microsoft.OperationalInsights/workspaces/MDC-Sentinel"
+          "value": "/subscriptions/c5fddee6-8712-4dd8-b580-637b37dc5472/resourceGroups/kpmg-sandbox/providers/Microsoft.OperationalInsights/workspaces/mdc-poc"
         }
       },
       
