@@ -1,0 +1,38 @@
+name: deploy-policy-DSO
+
+permissions:
+  id-token: write
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      remarks:
+        description: 'Reason for triggering the workflow run'
+        required: false
+        default: 'Updating Azure Policies'
+
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: sedstuff
+        run: find . -type f -exec sed -i 's@/ce8a8ac6-75f2-4b2d-8aae-6c39c8a3d6c9@g' {} \;
+
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          client-id: ae7637aa-7191-46e8-80cf-8a2492e19452
+          tenant-id: 9eea48fb-28f7-488d-85a8-813067b0da3c
+          allow-no-subscriptions: true
+
+      - name: Create or Update Azure Policies
+        uses: azure/manage-azure-policy@v0
+        with:
+          paths: |
+            policy-sandbox.json
+          assignments: |
+            assign.json

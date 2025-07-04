@@ -1,0 +1,149 @@
+{
+    "type": "Microsoft.Authorization/policySetDefinitions",
+    "name": "dso_monitoring_mdc",
+    "properties": {
+      "description": "Configure Azure Activity logs to stream to specified Log Analytics workspace",
+      "displayName": "dso_monitoring_mdc",
+      "policyType": "Custom",
+      "metadata": {},
+      "parameters": {
+        "workspace_id": {
+          "type": "String",
+          "metadata": {
+            "description": "DSO Primary Log Analytics workspace.",
+            "displayName": "Workspace Id"
+          },
+          "defaultValue": "/subscriptions/ce8a8ac6-75f2-42bd-8aae-6c39c8a3d6e9/resourceGroups/..."
+        },
+        "effect": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Effect",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "allowedValues": [
+            "DeployIfNotExists",
+            "Disabled"
+          ],
+          "defaultValue": "DeployIfNotExists"
+        },
+        "inclusionTagName": {
+            "type": "String",
+            "metadata": {
+            "displayName": "Inclusion Tag Name",
+            "description": "The tag name used to include resources in the policy"
+            },
+            "defaultValue": "environment"
+        },
+            "inclusionTagValues": {
+                "type": "Array",
+                "metadata": {
+                "displayName": "Inclusion Tag Values",
+                "description": "The tag values used to include resources in the policy"
+                },
+                "defaultValue": ["nonprod", "dev"]
+            },
+                "subPlan": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "Defender for Servers plans",
+                    "description": "Select a Defender for Servers plan"
+                },
+                "allowedValues": ["P1", "P2"],
+                "defaultValue": "P2"
+                },
+                "isAgentlessVmScanningEnabled": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "Agentless VM Scanning Enabled",
+                    "description": "Enable or disable the Agentless VM Scanning add-on feature"
+                },
+                "allowedValues": ["true", "false"],
+                "defaultValue": "true"
+                },
+                "isMdeDesignatedSubscriptionEnabled": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "MDE Designated Subscription Enabled",
+                    "description": "Enable or disable the MDE Designated Subscription add-on feature"
+                },
+                "allowedValues": ["true", "false"],
+                "defaultValue": "true"
+                }
+            },
+            "policyDefinitions": [
+                {
+                "parameters": {
+                    "logAnalytics": {
+                    "value": "[parameters('workspace_id')]"
+                    }
+                },
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2465583e-4e78-4c15-b6be-a36cbc7c8b0f"
+                },
+                {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/080fedce-9d4a-4d07-abf0-9f036afbc9c8",
+                "parameters": {
+                    "inclusionTagName": {
+                    "value": "[parameters('inclusionTagName')]"
+                    },
+                    "inclusionTagValues": {
+                    "value": "[parameters('inclusionTagValues')]"
+                    },
+                    "effect": {
+                    "value": "[parameters('effect')]"
+                    }
+                }
+                },
+                {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5eb6d64a-4086-4d7a-92da-ec51aed0332d",
+                "parameters": {
+                    "subPlan": {
+                    "value": "[parameters('subPlan')]"
+                    },
+                    "isMdeDesignatedSubscriptionEnabled": {
+                    "value": "[parameters('isMdeDesignatedSubscriptionEnabled')]"
+                    },
+                    "isAgentlessVmScanningEnabled": {
+                    "value": "[parameters('isAgentlessVmScanningEnabled')]"
+                    },
+                    "effect": {
+                    "value": "[parameters('effect')]"
+                    }
+                }
+                },
+                {
+                    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8e86a5b6-b9bd-49d1-8e21-4bb8a0862222",
+                    "parameters": {
+                    "effect": {
+                        "value": "[parameters('effect')]"
+                    }
+                    }
+                },
+                {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/da56d295-2889-41ce-a4cd-6f50fb93aa68",
+                "parameters": {
+                    "effect": {
+                    "value": "[parameters('effect')]"
+                    }
+                }
+                },
+                {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/48666c5d-cec1-4043-ab6b-1be05abb24f2",
+                "parameters": {
+                    "effect": {
+                    "value": "[parameters('effect')]"
+                    }
+                }
+                },
+                {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f9e2bd2f-47c7-4059-8265-c5292aa62c8a",
+                "parameters": {
+                    "effect": {
+                    "value": "[parameters('effect')]"
+                    }
+                }
+                }
+            ]
+            },
+            "id": "/subscriptions/ce8a8ac6-75f2-42bd-8aae-6c39c8a3d6e9/providers/Microsoft.Authorization/policySetDefinitions/dso_monitoring_mdc"
+        }
