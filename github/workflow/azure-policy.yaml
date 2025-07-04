@@ -20,13 +20,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: sedstuff
-        run: find . -type f -exec sed -i 's@/ce8a8ac6-75f2-4b2d-8aae-6c39c8a3d6c9@g' {} \;
+        run: find . -type f -exec sed -i 's@/c5fddee6-8712-4dd8-b580-637b37dc5472@g' {} \;
 
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ae7637aa-7191-46e8-80cf-8a2492e19452
-          tenant-id: 9eea48fb-28f7-488d-85a8-813067b0da3c
+          client-id: 449d0493-4b3a-4a76-ae09-4381769332c20
+          tenant-id: 831de134-d871-4cd7-823a-eacb69c699c8
           allow-no-subscriptions: true
 
       - name: Create or Update Azure Policies

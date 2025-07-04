@@ -13,7 +13,7 @@
             "description": "DSO Primary Log Analytics workspace.",
             "displayName": "Workspace Id"
           },
-          "defaultValue": "/subscriptions/ce8a8ac6-75f2-42bd-8aae-6c39c8a3d6e9/resourceGroups/..."
+          "defaultValue": "/subscriptions/c5fddee6-8712-4dd8-b580-637b37dc5472/resourceGroups/kpmg-sandbox/providers/Microsoft.OperationalInsights/workspaces/mdc-poc"
         },
         "effect": {
           "type": "String",
@@ -145,5 +145,5 @@
                 }
             ]
             },
-            "id": "/subscriptions/ce8a8ac6-75f2-42bd-8aae-6c39c8a3d6e9/providers/Microsoft.Authorization/policySetDefinitions/dso_monitoring_mdc"
+            "id": "/subscriptions/c5fddee6-8712-4dd8-b580-637b37dc5472/providers/Microsoft.Authorization/policySetDefinitions/dso_monitoring_mdc"
         }
