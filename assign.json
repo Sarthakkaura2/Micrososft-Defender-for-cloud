@@ -11,13 +11,14 @@
           "value": "/subscriptions/c5fddee6-8712-4dd8-b580-637b37dc5472/resourceGroups/mdc-poc/providers/Microsoft.OperationalInsights/workspaces/MDC-Sentinel"
         }
       },
-      "identity": {
-      "type": "SystemAssigned"
-    },
+      
       "scope": "/subscriptions/c5fddee6-8712-4dd8-b580-637b37dc5472",
       "description": "dso_monitoring_mdc",
       "metadata": {},
       "enforcementMode": "Default"
+    },
+    "identity": {
+      "type": "SystemAssigned"
     },
     "id": "/subscriptions/c5fddee6-8712-4dd8-b580-637b37dc5472/providers/Microsoft.Authorization/policyAssignments/dso_monitoring_mdc",
     "type": "Microsoft.Authorization/policyAssignments",
