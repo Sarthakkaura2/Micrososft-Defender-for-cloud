@@ -20,7 +20,7 @@
     "identity": {
       "type": "SystemAssigned"
     },
-    "id": "/subscriptions/c5fddee6-8712-4dd8-b580-637b37dc5472/providers/Microsoft.Authorization/policyAssignments/dso_monitoring_mdc",
+    "id": "/subscriptions/23f9f0af-f13f-4310-b518-d5394e4a3314/providers/Microsoft.Authorization/policyAssignments/dso_monitoring_mdc",
     "type": "Microsoft.Authorization/policyAssignments",
     "name": "dso_monitoring_mdc",
     "location": "uksouth"
