@@ -25,8 +25,8 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: 89c087b6-1a3d-4153-b9c5-cc0e20af8d30
-          tenant-id: 831de134-d871-4cd7-823a-eacb69c699c8
+          client-id: 875e5c0e-0ce2-4870-bec1-aafce4f65844
+          tenant-id: a8bacb9e-c262-4477-b2fc-f69e5e619e61
           allow-no-subscriptions: true
 
       - name: Create or Update Azure Policies
@@ -35,4 +35,4 @@ jobs:
           paths: |
             .
           assignments: |
-            assign.json
+            policyset.json
