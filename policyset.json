@@ -128,14 +128,6 @@
                 }
                 },
                 {
-                    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/49f7e59f-4318-4401-b0e6-5c5f462551a3", 
-                    "parameters": {
-                        "effect": {
-                            "value": "[parameters('effect')]"
-                        }
-                    }
-                },
-                {
                 "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/48666c5d-cec1-4043-ab6b-1be05abb24f2",
                 "parameters": {
                     "effect": {
