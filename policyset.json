@@ -128,7 +128,7 @@
                 }
                 },
                 {
-                    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/49f7e59f-4318-4401-b0e6-5c5f462551a3", // Microsoft Defender for Log Analytics should be enabled
+                    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/49f7e59f-4318-4401-b0e6-5c5f462551a3", 
                     "parameters": {
                         "effect": {
                             "value": "[parameters('effect')]"
